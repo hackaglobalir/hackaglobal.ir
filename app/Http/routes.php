@@ -29,8 +29,12 @@ Route::post('cp_admin/socials','AdminController@updateSocialInfo');
 
 Route::get('settings','LoginController@updatePage');
 
-Route:get('cp_admin/cities',function(){
+Route::get('cp_admin/cities',function(){
    return view('admin_city');
+});
+
+Route::get('register',function(){
+    return view('register');
 });
 
 Route::get('/cp_admin/contacts',function(){
