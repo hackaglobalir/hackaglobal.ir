@@ -28,4 +28,14 @@ class SettingRepository {
     {
         return Setting::where('tag', '=', $tag)->get()->first();
     }
+
+    /**
+     * updates the tag
+     */
+    public function setSetting($tag, $text)
+    {
+        $setting = Setting::where('tag', '=', $tag)->get()->first();
+        $setting->text = $text;
+        $setting->save();
+    }
 }

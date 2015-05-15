@@ -13,7 +13,9 @@
 
 Route::get('/', 'WelcomeController@index');
 
-Route::get('cp-admin/homeinfo','AdminController@homeInfo');
+Route::get('cp_admin/homeinfo','AdminController@homeInfo');
+
+Route::post('cp_admin/homeinfo','AdminController@updateHomeInfo');
 
 Route::get('home', 'HomeController@index');
 
