@@ -37,6 +37,18 @@ Route::get('/cp_admin/contacts',function(){
     return view('admin_contactus');
 });
 
+Route::get('/cp_admin',function(){
+    return view('admin');
+});
+
+Route::get('/cp_admin/events',function(){
+    return view('admin_event');
+});
+
+Route::get('/cp_admin/skills',function(){
+    return view('admin_skills');
+});
+
 Route::post('login', 'LoginController@checkLogin');
 
 Route::controllers([
