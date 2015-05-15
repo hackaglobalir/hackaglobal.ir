@@ -23,6 +23,8 @@ Route::get('logout', 'LoginController@logout');
 
 Route::get('login', 'LoginController@index');
 
+Route::get('cp_admin/social','AdminController@socialInfo');
+
 Route::post('login', 'LoginController@checkLogin');
 
 Route::controllers([

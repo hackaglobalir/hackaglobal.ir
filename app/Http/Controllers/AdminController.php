@@ -22,6 +22,17 @@ class AdminController extends Controller {
      *
      * @return mixed Response
      */
+    public function socialInfo()
+    {
+        return view('admin_social');
+    }
+
+    /**
+     * this function can get the information of the posts
+     * that are represented on the home page
+     *
+     * @return mixed Response
+     */
     public function homeInfo()
     {
         if(Session::get('role') != UserRepository::$roles['sadmin'])
