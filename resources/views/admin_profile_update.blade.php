@@ -11,44 +11,40 @@
 <body>
     <div id="left-side">
         @if($user->roll != 1)
-        <ul>
-            <li>
-                <a href="">داشبورد</a>
-                <i class="fa fa-home"></i>
-            </li>
-            <li>
-                <a href="">توضیحات</a>
-                <i class="fa fa-file-text"></i>
-            </li>
-            <li>
-                <a href="">تصاویر</a>
-                <i class="fa fa-picture-o"></i>
-            </li>
-            <li>
-                <a href="">شهرها</a>
-                <i class="fa fa-globe"></i>
-            </li>
-            <li>
-                <a href="">رویدادها</a>
-                <i class="fa fa-calendar-o"></i>
-            </li>
-            <li>
-                <a href="">نظرات</a>
-                <i class="fa fa-comments"></i>
-            </li>
-            <li>
-                <a href="">تماس با ما</a>
-                <i class="fa fa-phone"></i>
-            </li>
-            <li>
-                <a href="">شبکه های اجتماعی</a>
-                <i class="fa fa-globe"></i>
-            </li>
-            <li>
-                <a href="">کاربران</a>
-                <i class="fa fa-user"></i>
-            </li>
-        </ul>
+            <ul>
+                <li>
+                    <a href="/cp_admin/">داشبورد</a>
+                    <i class="fa fa-home"></i>
+                </li>
+                <li>
+                    <a href="/cp_admin/homeinfo">توضیحات</a>
+                    <i class="fa fa-file-text"></i>
+                </li>
+                <li>
+                    <a href="/cp_admin/cities">شهرها</a>
+                    <i class="fa fa-globe"></i>
+                </li>
+                <li>
+                    <a href="/cp_admin/events">رویدادها</a>
+                    <i class="fa fa-calendar-o"></i>
+                </li>
+                <li>
+                    <a href="/cp_admin/skills">مهارت ها</a>
+                    <i class="fa fa-cogs"></i>
+                </li>
+                <li>
+                    <a href="/cp_admin/contacts">تماس با ما</a>
+                    <i class="fa fa-phone"></i>
+                </li>
+                <li>
+                    <a href="/cp_admin/socials">شبکه های اجتماعی</a>
+                    <i class="fa fa-globe"></i>
+                </li>
+                <li>
+                    <a href="">کاربران</a>
+                    <i class="fa fa-user"></i>
+                </li>
+            </ul>
         @endif
     </div>
     <div id="top-box">
@@ -67,7 +63,7 @@
             <div class="circlet">
                 <i class="fa fa-globe"></i>
             </div>
-            <span>شبکه های اجتماعی</span>
+            <span>ویرایش اطلاعات</span>
         </div>
         <div id="posts">
             
@@ -81,21 +77,6 @@
 				<input type="text" placeholder="گذرواژه جدید" name="NewPass" id="NewPass"/>
 				<input type="text" placeholder="تکرار گذرواژه جدید" name="RePass" id="RePass"/>
 				<div class="h_con_skill">
-				<div class="h_skill"><input type="checkbox" name="php"/>PHP</div>
-				<div class="h_skill"><input type="checkbox" name="php"/>Mysql</div>
-				<div class="h_skill"><input type="checkbox" name="php"/>Python</div>
-				<div class="h_skill"><input type="checkbox" name="php"/>Laravel</div>
-				<div class="h_skill"><input type="checkbox" name="php"/>Javascript</div>
-				<div class="h_skill"><input type="checkbox" name="php"/>PHP</div>
-				<div class="h_skill"><input type="checkbox" name="php"/>Mysql</div>
-				<div class="h_skill"><input type="checkbox" name="php"/>Python</div>
-				<div class="h_skill"><input type="checkbox" name="php"/>Laravel</div>
-				<div class="h_skill"><input type="checkbox" name="php"/>Javascript</div>
-				<div class="h_skill"><input type="checkbox" name="php"/>PHP</div>
-				<div class="h_skill"><input type="checkbox" name="php"/>Mysql</div>
-				<div class="h_skill"><input type="checkbox" name="php"/>Python</div>
-				<div class="h_skill"><input type="checkbox" name="php"/>Laravel</div>
-				<div class="h_skill"><input type="checkbox" name="php"/>Javascript</div>
 				<div class="h_skill"><input type="checkbox" name="php"/>PHP</div>
 				<div class="h_skill"><input type="checkbox" name="php"/>Mysql</div>
 				<div class="h_skill"><input type="checkbox" name="php"/>Python</div>
