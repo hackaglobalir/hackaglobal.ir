@@ -39,7 +39,11 @@ class AdminController extends Controller {
         $headers[] = $settingRepo->getSetting('post3h1')->text;
 
         //return the 3 posts to the user
-        return view('admin_home_info',compact('posts','headers'));
+        $first_name = Session::get('first_name');
+        $last_name = Session::get('last_name');
+
+        //return the 3 posts to the user
+        return view('admin_home_info',compact('posts','headers','first_name','last_name'));
     }
 
     /**
@@ -73,7 +77,10 @@ class AdminController extends Controller {
         $headers[]  = Input::get('title2');
         $headers[]  = Input::get('title3');
 
+        $first_name = Session::get('first_name');
+        $last_name = Session::get('last_name');
+
         //return the 3 posts to the user
-        return view('admin_home_info',compact('posts','headers'));
+        return view('admin_home_info',compact('posts','headers','first_name','last_name'));
     }
 }

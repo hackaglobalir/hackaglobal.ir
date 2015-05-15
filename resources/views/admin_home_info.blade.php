@@ -52,7 +52,7 @@
         <i class="fa fa-power-off"></i>
     </div>
     <div id="userinfo">
-        <span>امید نیک راه</span>
+        <span>{{$first_name}} {{$last_name}}</span>
     </div>
 </div>
 <div id="right-side">
