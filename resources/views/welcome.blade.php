@@ -128,9 +128,9 @@
     <div class="cn">
         <span>کلیه حقوق این سایت محفوط است !!</span>
         <div id="socialnetwork">
-            <a href="#"><i class="fa fa-twitter tw"></i></a>
-            <a href="#"><i class="fa fa-facebook fb"></i></a>
-            <a href="#"><i class="fa fa-instagram ins"></i></a>
+            <a href="{{$twitter}}"><i class="fa fa-twitter tw"></i></a>
+            <a href="{{$facebook}}"><i class="fa fa-facebook fb"></i></a>
+            <a href="{{$instagram}}"><i class="fa fa-instagram ins"></i></a>
         </div>
     </div>
 </footer>

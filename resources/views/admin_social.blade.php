@@ -11,33 +11,33 @@
 <body>
     <div id="left-side">
         <ul>
-            <li class="active">
-                <a href="">داشبورد</a>
+            <li>
+                <a href="/cp_admin/">داشبورد</a>
                 <i class="fa fa-home"></i>
             </li>
             <li>
-                <a href="">توضیحات</a>
+                <a href="/cp_admin/homeinfo">توضیحات</a>
                 <i class="fa fa-file-text"></i>
             </li>
             <li>
-                <a href="">تصاویر</a>
-                <i class="fa fa-picture-o"></i>
-            </li>
-            <li>
-                <a href="">شهرها</a>
+                <a href="/cp_admin/cities">شهرها</a>
                 <i class="fa fa-globe"></i>
             </li>
             <li>
-                <a href="">رویدادها</a>
+                <a href="/cp_admin/events">رویدادها</a>
                 <i class="fa fa-calendar-o"></i>
             </li>
             <li>
-                <a href="">نظرات</a>
-                <i class="fa fa-comments"></i>
+                <a href="/cp_admin/skills">مهارت ها</a>
+                <i class="fa fa-cogs"></i>
             </li>
             <li>
-                <a href="">تماس با ما</a>
+                <a href="/cp_admin/contacts">تماس با ما</a>
                 <i class="fa fa-phone"></i>
+            </li>
+            <li class="active">
+                <a href="/cp_admin/socials">شبکه های اجتماعی</a>
+                <i class="fa fa-globe"></i>
             </li>
             <li>
                 <a href="">کاربران</a>
@@ -65,11 +65,11 @@
         </div>
         <div id="posts">
             
-			<form>
+			<form action="/cp_admin/socials" method="post">
 			<div class="h_e_btn">
-				<input type="text" placeholder="آدرس فیس بوک" name="Facebook" id="facebook"/>
-				<input type="text" placeholder="آدرس توییتر" name="Twitter" id="Twitter"/>
-				<input type="text" placeholder="آدرس اینستاگرام" name="Instagram" id="Instagram"/>
+				<input type="text" placeholder="آدرس فیس بوک" name="facebook" id="facebook" value="{{$facebook}}"/>
+				<input type="text" placeholder="آدرس توییتر" name="twitter" id="twitter" value="{{$twitter}}"/>
+				<input type="text" placeholder="آدرس اینستاگرام" name="instagram" id="instagram" value="{{$instagram}}"/>
 				<input type="submit" value="اضافه کردن" />
 			</form>
 			</div>

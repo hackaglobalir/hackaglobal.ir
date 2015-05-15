@@ -11,7 +11,7 @@
 <div id="loginbox">
     <form action="login" method="post">
         <input type="text" name="UserName" placeholder="نام کاربری" />
-        <input type="text" name="Password" placeholder="گذرواژه" />
+        <input type="password" name="Password" placeholder="گذرواژه" />
         <div id="chk">
             <div class="squaredThree">
                 <input type="checkbox" value="None" id="squaredThree" name="check" />

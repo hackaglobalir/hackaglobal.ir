@@ -58,6 +58,9 @@ class WelcomeController extends Controller {
         $headers[] = $settingRepo->getSetting('post1h1')->text;
         $headers[] = $settingRepo->getSetting('post2h1')->text;
         $headers[] = $settingRepo->getSetting('post3h1')->text;
+        $twitter = $settingRepo->getSetting('twitter')->text;
+        $facebook = $settingRepo->getSetting('facebook')->text;
+        $instagram = $settingRepo->getSetting('instagram')->text;
         $first_name = null;
         $last_name = null;
         if(Session::has('first_name'))
@@ -72,7 +75,10 @@ class WelcomeController extends Controller {
             'posts',
             'headers',
             'first_name',
-            'last_name'));
+            'last_name',
+            'twitter',
+            'facebook',
+            'instagram'));
 	}
 
 }

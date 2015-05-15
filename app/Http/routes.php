@@ -23,7 +23,9 @@ Route::get('logout', 'LoginController@logout');
 
 Route::get('login', 'LoginController@index');
 
-Route::get('cp_admin/social','AdminController@socialInfo');
+Route::get('cp_admin/socials','AdminController@socialInfo');
+
+Route::post('cp_admin/socials','AdminController@updateSocialInfo');
 
 Route::post('login', 'LoginController@checkLogin');
 

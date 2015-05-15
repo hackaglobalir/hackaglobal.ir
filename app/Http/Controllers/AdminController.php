@@ -24,7 +24,66 @@ class AdminController extends Controller {
      */
     public function socialInfo()
     {
-        return view('admin_social');
+        //check to see if the user is super admin
+        if(Session::get('role') != UserRepository::$roles['sadmin'])
+        {
+            return redirect('/');
+        }
+
+        //get the 3 posts
+        $settingRepo = new SettingRepository(new Setting);
+        $twitter = $settingRepo->getSetting('twitter')->text;
+        $facebook = $settingRepo->getSetting('facebook')->text;
+        $instagram = $settingRepo->getSetting('instagram')->text;
+
+        //get the user first and last name
+        $first_name = Session::get('first_name');
+        $last_name = Session::get('last_name');
+
+        return view('admin_social',compact(
+            'first_name',
+            'last_name',
+            'twitter',
+            'facebook',
+            'instagram'
+        ));
+    }
+
+    /**
+     * this function can get the information of the socials
+     * that are represented on the home page and update it
+     *
+     * @return mixed Response
+     */
+    public function updateSocialInfo()
+    {
+        if(Session::get('role') != UserRepository::$roles['sadmin'])
+        {
+            return redirect('/');
+        }
+
+        //update the 3 posts
+        $settingRepo = new SettingRepository(new Setting);
+
+        $settingRepo->setSetting('twitter',   Input::get('twitter'));
+        $settingRepo->setSetting('facebook',   Input::get('facebook'));
+        $settingRepo->setSetting('instagram',   Input::get('instagram'));
+
+        //return the socials to the user
+        $twitter =Input::get('twitter');
+        $facebook =Input::get('facebook');
+        $instagram =Input::get('instagram');
+
+        $first_name = Session::get('first_name');
+        $last_name = Session::get('last_name');
+
+        return view('admin_social',compact(
+            'first_name',
+            'last_name',
+            'twitter',
+            'facebook',
+            'instagram'
+        ));
     }
 
     /**
@@ -35,6 +94,7 @@ class AdminController extends Controller {
      */
     public function homeInfo()
     {
+        //check to see if the user is super admin
         if(Session::get('role') != UserRepository::$roles['sadmin'])
         {
             return redirect('/');
@@ -49,7 +109,7 @@ class AdminController extends Controller {
         $headers[] = $settingRepo->getSetting('post2h1')->text;
         $headers[] = $settingRepo->getSetting('post3h1')->text;
 
-        //return the 3 posts to the user
+        //get the user first and last name
         $first_name = Session::get('first_name');
         $last_name = Session::get('last_name');
 
