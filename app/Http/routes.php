@@ -27,6 +27,8 @@ Route::get('cp_admin/socials','AdminController@socialInfo');
 
 Route::post('cp_admin/socials','AdminController@updateSocialInfo');
 
+Route::get('settings','LoginController@updatePage');
+
 Route::post('login', 'LoginController@checkLogin');
 
 Route::controllers([

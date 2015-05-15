@@ -16,7 +16,7 @@
                 <span>{{$first_name}} {{$last_name}}  عزیز خوش آمدید</span>
             </div>
             <div id="left-toolbar">
-                <a href="#"><i class="fa fa-cog"></i></a>
+                <a href="/settings"><i class="fa fa-cog"></i></a>
                 <a href="/logout"><i class="fa fa-power-off"></i></a>
             </div>
         </div>

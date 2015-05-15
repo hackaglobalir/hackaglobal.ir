@@ -39,4 +39,17 @@ class UserRepository {
                     ->where('password', '=',sha1($password))
                     ->first();
     }
+
+    /**
+     * gets the user info based on email
+     *
+     * @email string the email of the user
+     *
+     * @return mixed the user or null
+     */
+    public function getUserInfoBasedOnEmail($email)
+    {
+        return User::where('email', '=', $email)
+            ->first();
+    }
 }

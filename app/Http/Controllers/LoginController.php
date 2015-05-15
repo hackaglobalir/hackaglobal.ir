@@ -58,6 +58,7 @@ class LoginController extends Controller {
         {
             Session::put('first_name', $user->first_name);
             Session::put('last_name', $user->last_name);
+            Session::put('email', $user->email);
             Session::put('role', $user->role);
             Session::put('created', date("Y-m-d H:i:s"));
 
@@ -72,7 +73,26 @@ class LoginController extends Controller {
                 return redirect('/');
             }
         }
+        return null;
+    }
 
-        //return panel
+    /**
+     * the update page
+     */
+    public function updatePage()
+    {
+        //check to see if the user is super admin
+        if(!Session::has('role'))
+        {
+            return redirect('/');
+        }
+
+        //check user validity
+        $userRepo = new UserRepository(new User);
+        $user = $userRepo->getUserInfoBasedOnEmail(Session::get('email'));
+
+        return view('admin_profile_update',compact(
+            'user'
+        ));
     }
 }

@@ -1,0 +1,52 @@
+.h_rows_e{
+	width:80%;
+	min-height:40px;
+	line-height:40px;
+	margin-bottom:2px;
+}
+.h_r_e{
+	background:#f1f1f1 !important;
+}
+.H_header_row_e{
+	background:#cbcbcb !important;
+}
+.h_rows_e > ul > li{
+	width:20%;
+	min-height:40px;
+	background:#ababab;
+}
+.h_row_i{
+	width:20%;
+	background:#f4f44	;
+	min-height:40px;
+	float:right;
+	text-align:center;
+}
+.h_marg_10{
+	margin-top:10px;
+}
+.h_e_btn{
+	width:100%;
+}
+.lfloat{
+	float:left;
+}
+.rfloat{
+	float:right;
+}
+.e_del{
+	background:#f3614e !important;
+}
+.h_skill{
+	    color: #555;
+		float:right;
+		
+	margin:5px !important;
+	padding:5px !important;
+}
+.h_skill > input{
+	text-align:right;
+}
+.h_con_skill{
+	width:70%;
+}

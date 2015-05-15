@@ -47,7 +47,7 @@
     </div>
     <div id="top-box">
         <div class="settings">
-            <i class="fa fa-cog"></i>
+            <a href="/settings"><i class="fa fa-cog"></i></a>
         </div>
         <div class="settings">
             <a href="/logout"><i class="fa fa-power-off"></i></a>
