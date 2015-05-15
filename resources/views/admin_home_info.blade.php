@@ -49,7 +49,7 @@
         <i class="fa fa-cog"></i>
     </div>
     <div class="settings">
-        <i class="fa fa-power-off"></i>
+        <a href="/logout"><i class="fa fa-power-off"></i></a>
     </div>
     <div id="userinfo">
         <span>{{$first_name}} {{$last_name}}</span>

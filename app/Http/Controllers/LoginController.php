@@ -20,6 +20,15 @@ class LoginController extends Controller {
     }
 
     /**
+     * kills the session and redirects to index
+     */
+    public function logout()
+    {
+        Session::flush();
+        return redirect('/');
+    }
+
+    /**
      * Checks the User credentials
      */
     public function checkLogin()

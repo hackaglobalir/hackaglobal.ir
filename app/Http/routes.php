@@ -19,6 +19,8 @@ Route::post('cp_admin/homeinfo','AdminController@updateHomeInfo');
 
 Route::get('home', 'HomeController@index');
 
+Route::get('logout', 'LoginController@logout');
+
 Route::get('login', 'LoginController@index');
 
 Route::post('login', 'LoginController@checkLogin');
