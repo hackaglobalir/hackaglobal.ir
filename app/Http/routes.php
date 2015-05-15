@@ -33,6 +33,10 @@ Route:get('cp_admin/cities',function(){
    return view('admin_city');
 });
 
+Route::get('/cp_admin/contacts',function(){
+    return view('admin_contactus');
+});
+
 Route::post('login', 'LoginController@checkLogin');
 
 Route::controllers([
