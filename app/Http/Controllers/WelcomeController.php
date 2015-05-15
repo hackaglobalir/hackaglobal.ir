@@ -1,5 +1,7 @@
 <?php namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Session;
 use Repositories\CityRepository;
 use Repositories\EventRepository;
 use Repositories\SettingRepository;
@@ -38,7 +40,8 @@ class WelcomeController extends Controller {
         {
             $cityList[] = [
                 "title" => $city->title,
-                "domain" => $city->domain_name
+                "domain" => $city->domain_name,
+                "img" => "/img/tehran.jpg"
             ];
         }
 
@@ -55,9 +58,21 @@ class WelcomeController extends Controller {
         $headers[] = $settingRepo->getSetting('post1h1')->text;
         $headers[] = $settingRepo->getSetting('post2h1')->text;
         $headers[] = $settingRepo->getSetting('post3h1')->text;
-
+        $first_name = null;
+        $last_name = null;
+        if(Session::has('first_name'))
+        {
+            $first_name = Session::get('first_name');
+            $last_name = Session::get('last_name');
+        }
         //view the blade template representation
-		return view('welcome',compact('cityList','lastEvent','posts','headers'));
+		return view('welcome',compact(
+            'cityList',
+            'lastEvent',
+            'posts',
+            'headers',
+            'first_name',
+            'last_name'));
 	}
 
 }
