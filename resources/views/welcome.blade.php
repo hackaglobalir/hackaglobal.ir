@@ -37,6 +37,7 @@
 			}
 		</style>
 	</head>
+    {{$lastEvent->title}}
 	<body>
         @foreach ($cityList as $city)
             <p>This is user {{ $city['title'] }}</p>

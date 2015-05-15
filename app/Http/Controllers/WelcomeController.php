@@ -1,7 +1,9 @@
 <?php namespace App\Http\Controllers;
 
 use Repositories\CityRepository;
+use Repositories\EventRepository;
 use \App\City;
+use \App\Event;
 
 class WelcomeController extends Controller {
 
@@ -37,6 +39,10 @@ class WelcomeController extends Controller {
                 "domain" => $city->domain_name
             ];
         }
+
+        //get the last event
+        $eventRepo = new EventRepository(new Event);
+        $lastEvent = $eventRepo->getLastEvent();
 
         //view the blade template representation
 		return view('welcome',compact('cityList','lastEvent'));

@@ -19,6 +19,11 @@ class CityRepository {
         $this->CityModel = $city;
     }
 
+    /**
+     * returns the list of all cities
+     *
+     * @return mixed the list of cities
+     */
     public function getAllCities()
     {
         return City::all();

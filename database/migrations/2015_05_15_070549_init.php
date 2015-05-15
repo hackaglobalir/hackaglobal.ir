@@ -38,7 +38,7 @@ class Init extends Migration {
             $table->text('description')->nullable();
             $table->dateTime('held_at');
             $table->string('held_at_string',50)->unique();
-            $table->tinyInteger('capacity');
+            $table->integer('capacity');
             $table->string('address',500);
             $table->string('map',100)->nullable();
             $table->unsignedInteger('city_id');
