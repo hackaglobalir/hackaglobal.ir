@@ -39,6 +39,14 @@
 	</head>
     {{$lastEvent->title}}
 	<body>
+        @foreach ($posts as $post)
+            {{ $post }}
+        @endforeach
+        <br/>
+        @foreach ($headers as $header)
+            {{ $header }}
+        @endforeach
+        <br/>
         @foreach ($cityList as $city)
             <p>This is user {{ $city['title'] }}</p>
         @endforeach

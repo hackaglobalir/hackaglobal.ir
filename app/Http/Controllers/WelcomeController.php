@@ -2,8 +2,10 @@
 
 use Repositories\CityRepository;
 use Repositories\EventRepository;
+use Repositories\SettingRepository;
 use \App\City;
 use \App\Event;
+use \App\Setting;
 
 class WelcomeController extends Controller {
 
@@ -44,8 +46,18 @@ class WelcomeController extends Controller {
         $eventRepo = new EventRepository(new Event);
         $lastEvent = $eventRepo->getLastEvent();
 
+        //get the 3 posts
+        $posts = [];
+        $settingRepo = new SettingRepository(new Setting);
+        $posts[] = $settingRepo->getSetting('post1')->text;
+        $posts[] = $settingRepo->getSetting('post2')->text;
+        $posts[] = $settingRepo->getSetting('post3')->text;
+        $headers[] = $settingRepo->getSetting('post1h1')->text;
+        $headers[] = $settingRepo->getSetting('post2h1')->text;
+        $headers[] = $settingRepo->getSetting('post3h1')->text;
+
         //view the blade template representation
-		return view('welcome',compact('cityList','lastEvent'));
+		return view('welcome',compact('cityList','lastEvent','posts','headers'));
 	}
 
 }
